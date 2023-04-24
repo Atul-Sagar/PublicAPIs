@@ -3,16 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TestComponentComponent } from './public-apis/test-component/test-component.component';
+import { APIService } from './services/api.service';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    APIService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
