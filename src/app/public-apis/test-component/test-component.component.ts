@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { APIService } from 'src/app/services/api.service';
+// import { db } from '../../services/db/db.service';
+import { HttpClient } from '@angular/common/http'
 
 
 @Component({
@@ -10,16 +12,20 @@ import { APIService } from 'src/app/services/api.service';
 export class TestComponentComponent implements OnInit {
 
   constructor(
-    private api : APIService
+    private api : APIService,
+    private http : HttpClient
+    // private db : db
   ) { }
 
   ngOnInit(): void {
   }
 
   callAPI(){
-    this.api.makeGetRequest("https://api.publicapis.org/entries").subscribe(
+    this.http.get("https://api.publicapis.org/entries").subscribe(
       (response ) => {
         console.log("Response : ", response);
+
+        
         
       },
       (error  ) => {

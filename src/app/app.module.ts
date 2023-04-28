@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponentComponent } from './public-apis/test-component/test-component.component';
 import { APIService } from './services/api.service';
+import { HttpClientModule } from '@angular/common/http'
 
 
 
@@ -15,7 +16,8 @@ import { APIService } from './services/api.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     APIService

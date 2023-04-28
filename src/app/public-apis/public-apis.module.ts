@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TestComponentComponent } from './test-component/test-component.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 
@@ -10,6 +11,7 @@ import { TestComponentComponent } from './test-component/test-component.componen
   ],
   imports: [
     CommonModule,
+    HttpClientModule
     
   ]
 })
